@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HemaScope AI - Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#080e1a;
+  --card:#0f1c2e;
+  --border:rgba(56,140,255,.2);
+  --blue:#378aff;
+  --teal:#00d4aa;
+  --text:#e8f0fe;
+  --text2:#8fa3c0;
+}
+
+body{
+  margin:0;
+  font-family:'Syne',sans-serif;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;                                              
+  color:var(--text);
+}
+
+.box{
+  width:350px;
+  background:var(--card);
+  padding:30px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  box-shadow:0 0 40px rgba(0,212,170,.08);
+}
+
+.title{
+  text-align:center;
+  font-size:22px;
+  font-weight:700;
+}
+
+.sub{
+  text-align:center;
+  font-size:12px;
+  color:var(--text2);
+  margin-bottom:25px;
+  font-family:'DM Mono';
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  background:#0d1525;
+  border:1px solid var(--border);
+  border-radius:8px;
+  color:white;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:var(--teal);
+  border:none;
+  border-radius:8px;
+  margin-top:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="title">HemaScope AI</div>
+  <div class="sub">Secure Medical Access</div>
+
+  <input type="text" id="userid" placeholder="User ID">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+  const id = document.getElementById("userid").value;
+  const pass = document.getElementById("password").value;
+
+  // Dummy login (you can change later)
+  if(id === "admin" && pass === "1234"){
+    window.location.href = "form.html";
+  } else {
+    alert("Invalid ID or Password");
+  }
+}
+</script>
+
+</body>
+</html>
